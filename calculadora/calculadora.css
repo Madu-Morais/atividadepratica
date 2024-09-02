@@ -1,0 +1,64 @@
+/* Estilização do corpo da página */
+body {
+    display: flex; /* Utiliza flexbox para alinhar os elementos */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /* Define a altura da página para ocupar a altura total da tela */
+    background-color: #f4f4f4; 
+    font-family: Arial, sans-serif; 
+}
+
+/* Estilização do contêiner da calculadora */
+.calculator {
+    background: #1e081f; 
+    color: #f4f4f4; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+    text-align: center; 
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilização do display da calculadora */
+#display {
+    width: 100%; /* Display ocupa toda a largura do contêiner */
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: none; /* Remove as bordas padrão */
+    border-radius: 5px;
+    text-align: right;
+    font-size: 18px; 
+    background-color: #222;
+    color: #fff; 
+    box-sizing: border-box; 
+}
+
+/* Estilização dos botões da calculadora */
+.buttons {
+    display: grid; /* Utiliza grid layout para os botões */
+    grid-template-columns: repeat(4, 60px); /* Define 4 colunas com botões de 60px de largura */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilo geral para todos os botões */
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px; 
+    font-size: 18px;
+    background-color: #555; 
+    color: #fff; 
+    cursor: pointer; 
+    transition: background 0.3s; /* Transição suave para mudanças de cor de fundo */
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background-color: #6E37A6; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilo específico para o botão '0' para ocupar duas colunas */
+.zero {
+    grid-column: span 2; /* Ocupa duas colunas no grid */
+}

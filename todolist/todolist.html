@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <div class="todo-container"> 
+        <h1>To-Do List</h1> 
+        <form id="todo-form"> <!-- Formulário para adicionar novas tarefas -->
+            <input type="text" id="todo-input" placeholder="Adicione uma nova tarefa..." required><!-- Campo de entrada de texto para as tarefas -->
+            <button type="submit">Adicionar</button> <!-- Botão para adicionar a tarefa -->
+        </form>
+        <ul id="todo-list"></ul> <!-- Lista não ordenada onde as tarefas serão exibidas -->
+    </div>
+
+    <script>
+        // Adiciona um listener de evento ao formulário para o evento 'submit'
+        document.getElementById('todo-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário (recarregar a página)
+
+            const input = document.getElementById('todo-input'); // Obtém o elemento de entrada de texto
+            const taskText = input.value.trim(); // Obtém o texto da tarefa e remove espaços extras
+
+            if (taskText !== '') { // Verifica se o campo de texto não está vazio
+                const listItem = document.createElement('li'); // Cria um novo elemento de lista
+                listItem.textContent = taskText; // Define o texto da tarefa no novo elemento de lista
+
+                // Adiciona um evento de clique à tarefa para marcar como concluída
+                listItem.addEventListener('click', function() {
+                    this.classList.toggle('completed'); // Alterna a classe 'completed' ao clicar, marcando a tarefa como feita
+                });
+
+                // Adiciona o item da tarefa à lista
+                document.getElementById('todo-list').appendChild(listItem);
+                input.value = ''; // Limpa o campo de entrada de texto após adicionar a tarefa
+            }
+        });
+    </script>
+</body>
+</html>

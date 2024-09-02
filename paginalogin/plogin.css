@@ -1,0 +1,61 @@
+body { /* Estilização do corpo da página */
+    display: flex; /* Define o layout de flexbox para centralização */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1C1240;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+/* Estilização do contêiner de login */
+.login-container {
+    background: #321659;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+/* Estilização do título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #cebeda;
+}
+
+form {
+    display: flex; /* Define o layout de flexbox */
+    flex-direction: column; /* Elementos em coluna */
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilização dos campos de entrada (inputs) */
+form input {
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1C1240;
+    color: white;
+}
+
+/* Estilização do botão de envio */
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8A3BBF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animação suave na cor de fundo */
+}
+
+/* Cor de fundo do botão ao passar o mouse */
+form button:hover {
+    background-color: #6E37A6;
+}

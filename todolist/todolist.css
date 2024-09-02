@@ -1,0 +1,84 @@
+body { /*Estilo geral do corpo da página*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Estilo para o contêiner da lista de tarefas */
+.todo-container {
+    background: #8A3BBF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px; /*Espaçamento abaixo do título*/
+}
+
+#todo-form {
+    display: flex; /*Alinha os itens do formulário */
+    margin-bottom: 20px;
+}
+
+/* Estilo para o campo de entrada de texto */
+#todo-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #6E37A6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor de fundo */
+}
+
+/* Cor de fundo do botão ao passar o mouse */
+button:hover {
+    background-color: #321659;
+}
+
+/* Estilo para a lista de tarefas:
+ Remove os marcadores padrão da lista
+ Remove o preenchimento padrão
+ Remove a margem padrão
+*/
+#todo-list {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
+
+
+/* Estilo para cada item da lista */
+#todo-list li {
+    background: #1C1240;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, text-decoration 0.3s;  /* Transições suaves para a mudança de cor e decoração do texto */
+    cursor: pointer;
+}
+
+/* Estilo para itens da lista marcados como completos */
+#todo-list li.completed {
+    background: #6E37A6;
+    text-decoration: line-through; /* Adiciona uma linha através do texto */
+    color: #ccc;
+}
